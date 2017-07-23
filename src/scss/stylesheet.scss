@@ -1,0 +1,188 @@
+/** FONTS
+----------------------------- **/
+
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');
+
+/** ANIMATIONS
+----------------------------- **/
+
+@keyframes blinker {  
+	50% { opacity: 0; }
+}
+
+/** NATIVE
+----------------------------- **/
+
+body {
+	background: #1d1d1d;
+	color: #FFFFFF;
+	font-family: 'Overpass Mono', 'Roboto', sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/** HEADER
+----------------------------- **/
+
+header {
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	a {
+		text-decoration: none;
+		color: #FFFFFF;
+	}
+
+	div.brand {
+		width: 300px;
+		min-height: 300px;
+
+		position:relative;
+		border-radius: 20px;
+		margin: 3rem;
+
+		background: #1d1d1d;
+
+		display: flex;
+
+		svg {
+			width: 64px;
+			height: 64px;
+			fill: #FFFFFF;
+		}
+
+		svg#score {
+			margin: 0rem;
+			margin-top: 5rem;
+			margin-left: 2rem;
+			animation: blinker 2s step-end infinite;
+		}
+	}
+
+	div.brand::after {
+		position:absolute;
+		content:"";
+		width:110%;
+		height:110%;
+		background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+		top:-5%;
+		left:-5%;
+		z-index:-1;
+		border-radius: 32px;
+	}
+
+	h1 {
+		font-size: 32pt;
+
+		label {
+			animation: blinker 2s step-end infinite;
+		}
+	}
+
+	h1,h2 {
+		margin: .5rem;
+	}
+
+}
+
+/** CONTENT
+----------------------------- **/
+
+section {
+
+	text-align: center;
+
+	a {
+		text-decoration: none;
+		color: #FFFFFF;
+		font-size: 12pt;
+
+		label {
+			border-bottom: 2px solid #FFFFFF;
+			padding-bottom: .1rem;
+			line-height: 3rem;
+			cursor: pointer;
+		}
+	}
+
+}
+
+section#projects {
+	width: 60%;
+	text-align: left;
+	padding: 1rem 0rem;
+
+	h2 small {
+		font-size: 12pt;
+		border: 2px solid #FFFFFF;
+		border-radius: 2px;
+		padding: .2rem .5rem;
+	}
+
+	.btn {
+		max-width: 50%;
+		border: 2px solid #FFFFFF;
+		text-align: center;
+		border-radius: 2px;
+		padding: .2rem 0rem;
+	}
+}
+
+/** MOBILE TABLES 
+----------------------------- **/
+
+@media screen and (max-width: 750px) {
+	section#projects {
+		width: 90%;
+		text-align: justify;
+	}
+}
+
+/** SMARTPHONES
+----------------------------- **/
+
+@media screen and (max-width: 500px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center; 
+		
+		div.brand {
+			width: 50vw;
+			min-height: 50vw;
+		}
+	}
+}
+
+/** PRE-SMARTPHONE
+----------------------------- **/
+
+@media screen and (max-width: 400px) {
+
+	header div.brand {
+		display: none;
+	}
+
+	section#projects {
+
+		div div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.btn {
+				padding: 25px 50px;
+			}
+		}
+	}
+}

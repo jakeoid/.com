@@ -1,0 +1,33 @@
+block variables
+doctype html
+html
+  head
+    title Jakeoid &mdash; #{htmlTitle}
+
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    meta(name='description', content='Hi, im Jakeoid. I develop and design things in Australia.')
+    meta(name='theme-color', content='#1d1d1d')
+    meta(name='author', content='Jakeoid')
+
+    meta(name='og:type', content='website')
+    meta(name='og:title', content='Jakeoid - #{htmlTitle}')
+    meta(name='og:description', content='Hi, im Jakeoid. I develop and design things in Australia.')
+    meta(name='og:image', content='https://jakeoid.com/img/meta-icon.png')
+
+    meta(name='twitter:card', content='summary')
+    meta(name="twitter:site", content='@jakeoid_')
+    meta(name='twitter:title' content='jakeoid.com')
+    meta(name='twitter:description' content='Hi, im Jakeoid. I develop and design things in Australia.')
+    meta(name='twitter:image', content='https://jakeoid.com/img/meta-icon.png')
+
+    link(rel='stylesheet', href='/css/stylesheet.css')
+    link(rel='icon', type='image/png', href='/img/favicon.png')
+
+  body
+    include ../partials/_header.pug
+    block content
+    include ../partials/_footer.pug
+    block scripts
