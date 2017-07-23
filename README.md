@@ -1,4 +1,4 @@
-<p style="text-align:center;"><img src="https://jakeoid.com/img/meta_icon.png"></p>
+<p style="text-align:center;"><img src="http://jakeoid.com/img/meta-icon.png"></p>
 
 <div align="center">
 	<p><b>Jakeoid.com</b></p>
