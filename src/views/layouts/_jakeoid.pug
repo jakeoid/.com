@@ -26,6 +26,21 @@ html
     link(rel='stylesheet', href='/css/stylesheet.css')
     link(rel='icon', type='image/png', href='/img/favicon.png')
 
+    script(type='application/ld+json').
+        {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Jakeoid",
+        "url": "http://www.jakeoid.com",
+        "logo": "http://www.jakeoid.com/img/meta-icon.png",
+        "description": "I develop and design things in Australia.",
+        "email": "mailto:jake@jakeoid.com",
+        "sameAs" : [ "https://twitter.com/jakeoid_",
+        "https://github.com/jakeoid",
+        "https://www.instagram.com/jakeoid/",
+        "https://twitch.tv/jakeoid"]
+        }
+
   body
     include ../partials/_header.pug
     block content
